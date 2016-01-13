@@ -3,9 +3,10 @@ package Ch_1;
 public class one_4 {
 	
 	public static void main(String[] args) {
-		int j=16;
-		int i=16;
+		
 		char[] str={'m','r',' ','j','o','h','n',' ','s','m','i','t','h',' ',' ',' ',' '};
+		int j=str.length-1;
+		int i=str.length-1;
 		for(;i>=0;i--)
 			if(str[i]==' ')
 				continue;
