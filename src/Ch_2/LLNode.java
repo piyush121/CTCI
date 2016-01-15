@@ -1,8 +1,8 @@
 package Ch_2;			//Implemented complete singly linked list
 
 public class LLNode {
-	private int key;
-	private LLNode next=null;
+	 int key;
+	 LLNode next=null;
 	
 	public LLNode(int data)
 	{
@@ -54,6 +54,8 @@ public class LLNode {
 	
 	public static void main(String[] args) {
 		LLNode head=new LLNode(1);
+		head.print(head);
+		System.out.println("\n");
 		head.addNode(head, 2);
 		head.addNode(head, 3);
 		head.addNode(head, 4);
