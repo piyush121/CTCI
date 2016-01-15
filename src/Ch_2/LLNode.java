@@ -1,30 +1,30 @@
 package Ch_2;			//Implemented complete singly linked list
 
-public class LLNode {
-	 int key;
-	 LLNode next=null;
+public class LLNode<T> {
+	 T key;
+	 LLNode<T> next=null;
 	
-	public LLNode(int data)
+	public LLNode(T data)
 	{
 		this.key=data;
 	}
 	
-	public boolean addNode(LLNode head,int data)
+	public boolean addNode(LLNode<T> head,T data)
 	{	if(head==null)
-			head=new LLNode(data);
+			head=new LLNode<T>(data);
 		
-		LLNode ptr=head;
+		LLNode<T> ptr=head;
 	while(ptr.next!=null)
 		ptr=ptr.next;
-	LLNode mynode=new LLNode(data);
+	LLNode<T> mynode=new LLNode<T>(data);
 	ptr.next=mynode;
 			
 		return true;
 	}
 	
-	public LLNode search(LLNode head,int data)
+	public LLNode<T> search(LLNode<T> head,T data)
 	{
-		LLNode ptr=head;
+		LLNode<T> ptr=head;
 		if(head.key==data)
 			return head;
 		while(ptr.next!=null)
@@ -36,17 +36,17 @@ public class LLNode {
 		return null;
 	}
 	
-	public void deletenode(LLNode head, int data)
+	public void deletenode(LLNode<T> head, T data)
 	{
-		LLNode ptr=head;
+		LLNode<T> ptr=head;
 		while(ptr.next.key!=data)
 			ptr=ptr.next;
 		ptr.next=ptr.next.next;
 	}
 	
-	public void print(LLNode head)
+	public void print(LLNode<T> head)
 	{
-		LLNode ptr=head;
+		LLNode<T> ptr=head;
 		while(ptr!=null)
 			{
 				System.out.print(ptr.key+"->");
@@ -56,7 +56,7 @@ public class LLNode {
 	}	
 	
 	public static void main(String[] args) {
-		LLNode head=new LLNode(1);
+		LLNode<Integer> head=new LLNode<>(1);
 		head.print(head);
 		System.out.println("\n");
 		head.addNode(head, 2);
