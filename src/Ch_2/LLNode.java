@@ -10,7 +10,10 @@ public class LLNode {
 	}
 	
 	public boolean addNode(LLNode head,int data)
-	{	LLNode ptr=head;
+	{	if(head==null)
+			head=new LLNode(data);
+		
+		LLNode ptr=head;
 	while(ptr.next!=null)
 		ptr=ptr.next;
 	LLNode mynode=new LLNode(data);
