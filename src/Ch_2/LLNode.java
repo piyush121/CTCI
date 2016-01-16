@@ -1,11 +1,11 @@
 package Ch_2;			//Implemented complete singly linked list
 
 public class LLNode<T> {
-	 T key;
-	 LLNode<T> next=null;
+	 public T key;
+	 public LLNode<T> next=null;
 	
 	public LLNode(T data)
-	{
+	{/
 		this.key=data;
 	}
 	
