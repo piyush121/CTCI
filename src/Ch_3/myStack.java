@@ -1,7 +1,7 @@
 package Ch_3;
 import java.util.ArrayList;
 
-
+//Using array list.. not interesting though makes it easier.
 public class myStack<T> {
 	ArrayList<T> node;
 	int top=node.size()-1;
