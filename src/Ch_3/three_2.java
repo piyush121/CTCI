@@ -1,8 +1,9 @@
 package Ch_3;
 import java.util.*;
-
+// Didn't know we could extend stack class to edit it for our need... Great learning.
 public class three_2 extends Stack<Integer>{
 
+	private static final long serialVersionUID = 1L;
 	Stack<Integer> min=new Stack<>();
 	
 	@Override
