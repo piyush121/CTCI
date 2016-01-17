@@ -1,7 +1,7 @@
 package Ch_3;
 
 import java.util.Stack;
-// Didn't imlement peek as it was quite obvious.
+// Didn't implement peek as it was quite obvious.
 public class three_5 {
 Stack<Integer> stack1=new Stack<>();
 Stack<Integer> stack2=new Stack<>();
