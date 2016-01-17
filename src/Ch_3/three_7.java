@@ -21,13 +21,16 @@ class Dog extends Animal{
 	
 }
 class Cat  extends Animal{
-
+	Cat(String name){
+	super.name=name;
+	super.time++;
+	}
 }
 
 public class three_7 {
 
-	Queue<Animal> dogque=new LinkedList<>();
-	Queue<Animal> catque=new LinkedList<>();
+	Queue<Dog> dogque=new LinkedList<>();
+	Queue<Cat> catque=new LinkedList<>();
 	
 	public Animal dequeany()
 	{
@@ -42,8 +45,14 @@ public class three_7 {
 	public void enque(Animal animal)
 	{	
 		if(animal instanceof Dog)
-			dogque.add(animal);
+			dogque.add((Dog)animal);
 		else
-			catque.add(animal);
+			catque.add((Cat)animal);
+	}
+	
+	public static void main(String[] args) {
+		Animal mydog=new Dog("Sniper");
+		three_7 myqueue=new three_7();
+		myqueue.enque(mydog);
 	}
 }
