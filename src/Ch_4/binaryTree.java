@@ -1,5 +1,6 @@
 package Ch_4;
 
+
 class treeNode
 {
 	int data;
@@ -13,7 +14,7 @@ class treeNode
 	}
 }
 
-public class Tree {
+public class binaryTree {
 	treeNode root;
 	
 	public void add(treeNode node)
@@ -77,6 +78,8 @@ public class Tree {
 
 	}
 	
+	
+	
 	public static void main(String[] args) {
 		treeNode node1=new treeNode(4,null,null);
 		treeNode node2=new treeNode(5,null,null);
@@ -85,7 +88,7 @@ public class Tree {
 		treeNode node5=new treeNode(3,null,null);
 		treeNode node6=new treeNode(3,null,null);
 
-		Tree mytree=new Tree();
+		binaryTree mytree=new binaryTree();
 		mytree.add(node1);
 		mytree.add(node2);
 		mytree.add(node3);
