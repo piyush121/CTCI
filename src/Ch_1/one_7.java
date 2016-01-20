@@ -1,4 +1,4 @@
-package Ch_1;
+package ch_1;
 
 public class one_7 {
 	

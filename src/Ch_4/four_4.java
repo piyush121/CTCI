@@ -1,4 +1,4 @@
-package Ch_4;
+package ch_4;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -10,8 +10,8 @@ public class four_4 {
 	public static ArrayList<LinkedList<treeNode>> depth(treeNode root)
 	{
 		ArrayList<LinkedList<treeNode>>	result=new ArrayList<LinkedList<treeNode>>();
-		result.add(new LinkedList<treeNode>());
-		result.get(0).add(root);
+		result.add(new LinkedList<treeNode>());		//No additional data structures needed like in the book.
+		result.get(0).add(root);					// Just one arraylist and you are done !
 
 			for(int i=0;i<result.size();i++)
 			{
@@ -19,9 +19,10 @@ public class four_4 {
 				while(iter.hasNext())
 					
 					{	treeNode node=iter.next();
-						if(node.right==null && node.right==null)
+						if(node.right==null && node.right==null)	//to check leaf node.
 							continue;
-						result.add(new LinkedList<treeNode>());
+						if(result.size()==i+1)						//to check whether there is already a new list created for one level below.
+							result.add(new LinkedList<treeNode>());
 						if(node.left!=null)
 							result.get(i+1).add(node.left);
 						if(node.right!=null)
@@ -39,12 +40,15 @@ public class four_4 {
 		treeNode node3=new treeNode(2,null,null);
 		treeNode node4=new treeNode(1,null,null);
 		treeNode node5=new treeNode(3,null,null);
+		treeNode node6=new treeNode(6,null,null);
 		binaryTree mytree=new binaryTree();
 		mytree.add(node1);
 		mytree.add(node2);
 		mytree.add(node3);
 		mytree.add(node4);
 		mytree.add(node5);
+		mytree.add(node6);
+
 		
 		ArrayList<LinkedList<treeNode>> result=depth(mytree.root);
 		

@@ -1,4 +1,4 @@
-package Ch_4;
+package ch_4;
 import java.util.*;
 
 public class four_1 {				//O(N), tried to cut down calls in recursion.

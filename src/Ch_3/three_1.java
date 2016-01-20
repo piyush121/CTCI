@@ -1,4 +1,4 @@
-package Ch_3;
+package ch_3;
 
 public class three_1 {
 

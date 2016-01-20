@@ -1,4 +1,4 @@
-package Ch_2;
+package ch_2;
 							///Slightly changed the logic for my own satisfaction.
 public class two_6 {
 	

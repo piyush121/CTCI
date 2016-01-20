@@ -1,4 +1,4 @@
-package Ch_2;			//Implemented complete singly linked list
+package ch_2;			//Implemented complete singly linked list
 
 public class LLNode<T> {
 	 public T key;

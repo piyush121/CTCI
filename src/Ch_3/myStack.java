@@ -1,4 +1,4 @@
-package Ch_3;
+package ch_3;
 import java.util.ArrayList;
 
 //Using array list.. not interesting though makes it easier.

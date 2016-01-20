@@ -1,4 +1,4 @@
-package Ch_3;
+package ch_3;
 
 import java.util.LinkedList;
 import java.util.Queue;			//Quite straight forward. Not implementing corner cases.

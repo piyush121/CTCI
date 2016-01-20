@@ -1,4 +1,4 @@
-package Ch_4;
+package ch_4;
 
 public class four_3 {               //ELEGANT RECURSIVE SOLUTION. O(NlogN).
 

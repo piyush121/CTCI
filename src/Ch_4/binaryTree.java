@@ -1,10 +1,11 @@
-package Ch_4;
+package ch_4;
 
 
 class treeNode
 {
 	int data;
 	treeNode left,right;
+	treeNode parent=null;
 	
 	treeNode(int data,treeNode left,treeNode right)
 	{
