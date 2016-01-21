@@ -14,10 +14,9 @@ class treeNode
 		this.right=right;
 	}
 	
-	public String toString()
-	{
-		return ""+data;
-		
+	@Override
+	public String toString() {
+		return "treeNode [data=" + data + ", left=" + left + ", right=" + right + ", parent=" + parent + "]";
 	}
 }
 
