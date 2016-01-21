@@ -5,7 +5,7 @@ import java.util.HashSet;
 public class four_7 {
 	
 	public treeNode commonAncestor(treeNode n1,treeNode n2)		//If we are allowed to use additional data structure. But sadly we are not allowed.
-	{
+	{															// Didn't check the base condition where n1 or n2   might not be present in the tree.
 		HashSet<treeNode> myhash=new HashSet<>();
 		while(n1!=null)
 		{
