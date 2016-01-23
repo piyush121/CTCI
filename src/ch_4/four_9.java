@@ -1,6 +1,8 @@
 package ch_4;
 
 public class four_9 {	
+	
+	
 	static StringBuilder strb=new StringBuilder();
 	static int val=0;
 	
