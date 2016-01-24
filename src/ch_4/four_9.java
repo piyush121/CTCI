@@ -6,30 +6,32 @@ public class four_9 {
 	static StringBuilder strb=new StringBuilder();
 	static int val=0;
 	
-	public static int printPath(treeNode root, int target)
+	public static void printPath(treeNode root, int target)
 	{
 		if(root==null)
+			return ;
+		int depth=depth(root);
+		int sz[]=new int[depth];
+		
+		
+	}
+	static void printPath(treeNode node,int target,int[] path,int level)
+	{
+		
+	}
+	
+	static void print(int[] path)
+	{
+		for(int i=0;i<path.length;i++)
+			System.out.println(path[i]);
+	}
+	
+	public static int depth(treeNode node)
+	{
+		if (node==null)
 			return 0;
-		if(root.data==target)
-			{
-				strb.append(root.data);
-				return target;
-			}
-		
-		if(root.data<target)
-			{	
-			
-				strb.append(root.data);
-				val=printPath(root.left, target-root.data);
-			}
-		if(root.data>target)
-		{
-			return 0;
-		}
-		val=printPath(root.right, target - root.data);
-		
-		return val;
-		
+		else
+			return 1+Math.max(depth(node.left), depth(node.right));
 	}
 
 	public static void main(String[] args) {
