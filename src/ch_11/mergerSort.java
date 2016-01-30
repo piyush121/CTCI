@@ -1,10 +1,12 @@
 package ch_11;
 
+import java.util.Arrays;
+
 public class mergerSort {
 
 	public static void MergeSort(int[] A,int[] helper,int low,int high)
 	
-	{	while(low<high)
+	{	if(low<high)
 		{
 			int mid=(low+high)/2;
 			MergeSort(A,helper,low,mid);
@@ -32,14 +34,17 @@ public class mergerSort {
 				{
 					arr[curr]=helper[helperleft];
 					helperleft++;
+					System.out.println(helperleft);
+					
 				}
 			else
 			{
 				arr[curr]=helper[helperright];
 				helperright++;
+				
 			}
 			curr++;
-			System.out.println("hi");
+			
 		}
 		
 		int rem=mid-helperleft;
@@ -53,7 +58,7 @@ public class mergerSort {
 		int[] helper = new int[array.length];
 		MergeSort(array,helper,0,array.length-1);
 		
-		System.out.println(array);
+		System.out.println(Arrays.toString(array));
 		
 	}
 	
