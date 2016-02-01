@@ -15,7 +15,7 @@ public class eleven_seven {
 			j=0;
 			while(j<i)
 			{
-				if(A[j].compareTo(A[i])<0)
+				if(A[j].isBefore(A[i]))
 					res[i]=Math.max(res[i], 1+res[j]);
 				j++;
 				
@@ -28,7 +28,7 @@ public class eleven_seven {
 	
 	
 	public static void main(String[] args) {
-		htwt[] arr={new htwt(1,2),new htwt(4,2),new htwt(5,4),new htwt(6,5),new htwt(5,6)};
+		htwt[] arr={new htwt(1,2),new htwt(0,2),new htwt(5,4),new htwt(1,7),new htwt(5,6)};
 		System.out.println(LIS(arr));
 	}
 
