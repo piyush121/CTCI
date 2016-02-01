@@ -1,19 +1,18 @@
 package ch_11;
 
-public class eleven_six {
+public class eleven_six {		//Good Question.
 	
 	public static int bsearch(int[] arr,int target)
 	{
 		int low=0;
 		int high=arr.length-1;
-		int mid=(low+high)/2;
+		int mid;
 		
 		while(low<=high)
 		{	
+			mid=(low+high)/2;
 			if(arr[mid]==target)
-			{
 				return mid;
-			}
 			if(arr[mid]>target)
 				high=mid-1;
 			else
@@ -44,7 +43,7 @@ public class eleven_six {
 	
 	public static void main(String[] args) {
 		int[][] array={{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
-		System.out.println(matrixSearch(array, 4, 3, 8));
+		System.out.println(matrixSearch(array, 4, 3, 4));
 	}
 
 }
