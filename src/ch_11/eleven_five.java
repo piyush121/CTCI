@@ -50,7 +50,7 @@ public class eleven_five {
 	public static void main(String[] args) {
 		
 		String[] str={"at","","","","ball","","","cat","","","dad","","yo"};
-		System.out.println(search(str,"ball",0,12));
+		System.out.println(search(str,"ya",0,12));
 		
 	}
 
