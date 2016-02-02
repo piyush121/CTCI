@@ -10,12 +10,13 @@ public class eleven_seven {
 		int[] res=new int[A.length];
 		int i=1;
 		Arrays.fill(res, 1);
+		Arrays.sort(A);		//Sort according the height.
 		for(i=1;i<res.length;i++)
 		{	
 			j=0;
 			while(j<i)
 			{
-				if(A[j].isBefore(A[i]))
+				if(A[j].isBefore(A[i]))		//find whether j's weight is less that i or not.
 					res[i]=Math.max(res[i], 1+res[j]);
 				j++;
 				
