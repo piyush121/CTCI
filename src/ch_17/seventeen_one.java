@@ -15,5 +15,10 @@ public class seventeen_one {
 		Integer y=5;
 		
 		swap(x,y);
+		
+		x=y^x^(y=x);
+		System.out.println(x+" "+y);
+				
+
 	}
 }
