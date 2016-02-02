@@ -4,17 +4,16 @@ public class seventeen_one {
 
 	public static void swap(Integer a,Integer b)
 	{
-		a=a.sum(a, b);
+		System.out.println(a+" "+b);
+		a=a+b;
 		b=a-b;
 		a=a-b;
-		
+		System.out.println(a+" "+b);
 	}
 	public static void main(String[] args) {
-		Integer x=new Integer(4);
-		Integer y=new Integer(5);
-		System.out.println(x+" "+y);
-
+		Integer x=4;
+		Integer y=5;
+		
 		swap(x,y);
-		System.out.println(x+" "+y);
 	}
 }
