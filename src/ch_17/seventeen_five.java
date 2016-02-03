@@ -45,7 +45,6 @@ public class seventeen_five {
 				freq[code]++;
 			}
 			
-			
 		}
 		
 		//compute pseudo hits;
