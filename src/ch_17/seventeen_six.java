@@ -29,7 +29,6 @@ public class seventeen_six {
 				break;
 			j--;
 		}
-		System.out.println("Mid Index="+mid);
 
 		for(mid=low;mid<A.length-1;mid++)
 		{
@@ -38,7 +37,6 @@ public class seventeen_six {
 		}
 		for(mid=high;mid>0;mid--)
 		{
-
 			while(A[mid]>A[j] && j!=A.length)
 				j++;
 			
