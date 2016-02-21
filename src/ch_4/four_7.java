@@ -38,8 +38,8 @@ public class four_7 {
 			return null;
 		if(root==n1 || root ==n2)
 			return root;
-		boolean inLeftn1=search(root,n1);
-		boolean inLeftn2=search(root,n2);
+		boolean inLeftn1=search(root,n1);// SEARCHING left for node 1.
+		boolean inLeftn2=search(root,n2);// searching right for node 2.
 		if(inLeftn1!=inLeftn2)
 			return root;
 		if(inLeftn1)
