@@ -5,7 +5,7 @@ public class LLNode<T> {
 	 public LLNode<T> next=null;
 	
 	public LLNode(T data)
-	{/
+	{
 		this.key=data;
 	}
 	
