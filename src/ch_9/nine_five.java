@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class nine_five {
 	
-	public static void permute(String prefix,String suffix)
+	public static void permute(String prefix,String suffix)//Pretty famous and deep method.
 	{
 		if(suffix.equals(""))
 			System.out.println(prefix);
@@ -13,7 +13,7 @@ public class nine_five {
 				permute(prefix+suffix.charAt(i),suffix.substring(0, i)+suffix.substring(i+1));
 	}
 	
-	public static ArrayList<String> permute2(String str)
+	public static ArrayList<String> permute2(String str) // CTCI method
 	{
 		if(str==null)
 			return null;
