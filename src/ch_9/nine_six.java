@@ -1,5 +1,6 @@
 package ch_9;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -36,7 +37,7 @@ public class nine_six {
 							result.add(insertParen(str, i)); // addinng `()` after every left parenthesis.
 						}
 					}
-					result.add("()"+str); // adding "()" to the beginning.
+					result.add("()"+str);
 				}
 				
 			}
@@ -50,11 +51,30 @@ public class nine_six {
 		String right=str.substring(leftindex+1);
 		return left+"()"+right;
 	}
+	
+	public static void permuteParenthesis2(int open,int close,char[] str,int count, ArrayList<String> list)// easy recursive solution.
+	{
+		if(open==0 &&close==0) //base case
+			list.add(new String(str));
+		if(open>0)
+			{	
+				str[count]='(';
+				permuteParenthesis2(open-1, close+1,str,count+1,list );//decrease open braces and increase close braces.
+			}
+		if(close>0)
+			{
+				str[count]=')';
+				permuteParenthesis2(open, close-1,str,count+1,list); // str+ operation is a O(n) operation. Be careful. Use string builder instead.
+			}
+
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(permuteParenthesis1(3));
-
+		ArrayList<String> result=new ArrayList<>();
+		char[] charArray=new char[6];
+		permuteParenthesis2(3,0,charArray,0,result);
+		System.out.println(result);
 	}
 
 }
