@@ -4,10 +4,9 @@ public class Quick_Sort {
 	
 	public static void qsort(int[] nums,int low,int high){
 	
-	   int pos=0;
-	   if(low<high)
+   if(low<high)
 	   {
-       pos=partition(nums,low,high);
+       int pos=partition(nums,low,high);
 	   System.out.print(pos+"");
 
 	   qsort(nums,low,pos-1);
@@ -22,7 +21,10 @@ public class Quick_Sort {
 
        for(int i=low;i<=high;i++)
     	   if(arr[pivot]>arr[i])
-    		   j++;
+    		   {
+    		   		j++;
+    		   		swap(j,i,arr);
+    		   }
        swap(j,low,arr);
        return j;
               
@@ -39,7 +41,7 @@ public class Quick_Sort {
 
    public static void main(String[] args)
    {
-	   int A[]={8,7,6,5,4,3,2,1};
+	   int A[]={4,5,6,3,2,7,8,0};
 	   qsort(A,0,7);
        for(int i=0;i<A.length;i++)
     	   System.out.print("\n"+A[i]+" ");
