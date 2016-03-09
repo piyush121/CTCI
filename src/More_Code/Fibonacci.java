@@ -24,8 +24,8 @@ public class Fibonacci { // Crush Fibonacci number.
 		int[] DP = new int[Math.max(n + 1, 3)];
 		DP[0] = 0;
 		DP[1] = 1;
-		DP[2] = 1;
-		for (int i = 3; i <= n; i++) {
+		
+		for (int i = 2; i <= n; i++) {
 			DP[i] = DP[i - 1] + DP[i - 2];
 		}
 		return DP[n];
@@ -37,10 +37,10 @@ public class Fibonacci { // Crush Fibonacci number.
 			throw new IllegalArgumentException();
 		if (n == 0)
 			return 0;
-		int prevPrev = 1;
+		int prevPrev = 0;
 		int prev = 1;
-		int curr = 2;
-		for (int i = 3; i <= n; i++) {
+		int curr = 1;
+		for (int i = 2; i <= n; i++) {
 			curr = prev + prevPrev;
 			prevPrev = prev;
 			prev = curr;
@@ -50,9 +50,9 @@ public class Fibonacci { // Crush Fibonacci number.
 	}
 
 	public static void main(String[] args) {
-		System.out.println(fibR(6));
-		System.out.println(fibDP(6));
-		System.out.println(fib(6));
+		System.out.println(fibR(3));
+		System.out.println(fibDP(3));
+		System.out.println(fib(3));
 	}
 
 }
