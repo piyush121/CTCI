@@ -49,9 +49,6 @@ public class StockGrabber implements GrabberofStocks {
 			obs.setPrice(IBMPrice, googPrice);
 		}
 
-		ArrayList<Number> arr = new ArrayList<>();
-		arr.add(Integer.valueOf(6));
-		arr.add(Float.valueOf(5.0f));
 	}
 
 }
